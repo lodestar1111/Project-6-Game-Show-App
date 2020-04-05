@@ -29,7 +29,9 @@ body {
   height: 100vh;
 }
 
-li, ol, ul {
+li,
+ol,
+ul {
   padding: 0;
   display: inline-block;
 }
@@ -132,6 +134,7 @@ button {
   left: 0;
   right: 0;
   border-radius: 5px;
+
 }
 
 .title {
