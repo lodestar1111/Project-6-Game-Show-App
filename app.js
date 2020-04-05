@@ -1,10 +1,10 @@
 // Game Variables
 const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
-const startButton = document.querySelectorAll('.btn__reset')[0];
+const startButton = document.querySelectorAll('.btn__reset');
 const buttons = document.querySelectorAll('.keyrow button');
 let missed = 0;
-let lives = document.querySelector('.tries');
+let lives = document.querySelectorAll('.tries');
 // Phrases
 function startGame() {
     let phrases = [
