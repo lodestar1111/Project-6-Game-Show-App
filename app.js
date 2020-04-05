@@ -32,46 +32,30 @@ function startGame() {
 
     function addPhraseToDisplay(arr) {
 
-        arr.forEach(letter => {
-            let li = document.createElement("li");
-            li.innerHTML = letter;
-            if (letter === ' ') {
-                li.className = ('blank');
-                li.style.padding = "10px";
-                li.style.display = 'flex';
-            } else {
-                li.className = ('letter');
-                li.style.marginTop = "10px";
-            }
-            phrase.firstElementChild.appendChild(li);
-        });
-
-
-    }
 
 
 
 
-    //adds the letters of a string to the display
-    const addPhraseToDisplay = arr => {
+        //adds the letters of a string to the display
+        const addPhraseToDisplay = arr => {
 
 
-    }
+        }
 
-    //check if a letter is in the phrase
-    const checkLetter = button => {
-
-
-    }
-
-    //check if the game has been won or lost
-    const checkWin = () => {
+        //check if a letter is in the phrase
+        const checkLetter = button => {
 
 
-    }
+        }
 
-    //listen for the start game button to be pressed
+        //check if the game has been won or lost
+        const checkWin = () => {
+
+
+        }
+
+        //listen for the start game button to be pressed
 
 
 
-    // listen for the onscreen keyboard to be clicked
+        // listen for the onscreen keyboard to be clicked
