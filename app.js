@@ -44,6 +44,8 @@ function addPhraseToDisplay(arr) {
     }
   }
 }
+const phraseArray = getRandomPhraseAsArray(phrases);
+addPhraseToDisplay(phraseArray);
 //check if a letter is in the phrase
 const checkLetter = (button) => {};
 
