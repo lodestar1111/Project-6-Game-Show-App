@@ -29,26 +29,25 @@ function getRandomPhraseAsArray(arr) {
   return split;
 }
 
-functiongetRandomPhraseAsArray(phrases);
+getRandomPhraseAsArray(phrases);
 
 //adds the letters of a string to the display
-function addPhraseToDisplay(arr) => {
-    
-};
-
+function addPhraseToDisplay = (arr) => {
+for (let i = 0; index < array.length; i++) {
+    let item = array[i];
+    ul.appendChild(item);
+    item.innerHTML = arr[i];
+    if (arr[i] === '') {
+      list.classList.add('space');
+    }
+      
+    }
 //check if a letter is in the phrase
-const checkLetter  (button) => {
- let li = document.querySelectorAll('.letter'); 
-};
+const checkLetter = (button) => {};
 
 //check if the game has been won or lost
 const checkWin = () => {};
 
 //listen for the start game button to be pressed
-startButton.addEventListener('click', () => {
 
-});
 // listen for the onscreen keyboard to be clicked
-qwerty.addEventListener('click', e => {
-
-});
