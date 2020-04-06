@@ -39,6 +39,8 @@ for (let i = 0; index < array.length; i++) {
     item.innerHTML = arr[i];
     if (arr[i] === '') {
       list.classList.add('space');
+    } else {
+      
     }
       
     }
