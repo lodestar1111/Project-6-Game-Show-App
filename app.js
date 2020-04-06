@@ -33,7 +33,7 @@ getRandomPhraseAsArray(phrases);
 
 //adds the letters of a string to the display
 function addPhraseToDisplay(arr) {
-  for (let i = 0; index < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     let item = document.createElement("");
     ul.appendChild(item);
     item.innerHTML = arr[i];
@@ -47,7 +47,18 @@ function addPhraseToDisplay(arr) {
 const phraseArray = getRandomPhraseAsArray(phrases);
 addPhraseToDisplay(phraseArray);
 //check if a letter is in the phrase
-const checkLetter = (button) => {};
+function checkLetter (button) {
+checkLetter = 
+let match = ('null')
+for(let i = 0; i; i<li.length; i++) {
+  if (li[i] === button) {
+    
+  }
+
+
+}
+
+};
 
 //check if the game has been won or lost
 const checkWin = () => {};
