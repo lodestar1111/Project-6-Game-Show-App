@@ -84,7 +84,7 @@ qwerty.addEventListener("click", (e) => {
 
     if (find === false) {
       missed += 1;
-      lives[missed - 1];
+      lives[missed - 1].firstChild.src = "images/lostHeart.png";
     }
   }
 });
