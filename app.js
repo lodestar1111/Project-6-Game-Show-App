@@ -18,6 +18,7 @@ let phrases = [
   "May I see your manager",
 ];
 
+//listen for the start game button to be pressed
 startButton.addEventListener("click", () => {
   document.getElementById("overlay").style.display = "none";
 });
@@ -47,8 +48,8 @@ function addPhraseToDisplay(arr) {
 }
 const phraseArray = getRandomPhraseAsArray(phrases);
 addPhraseToDisplay(phraseArray);
-//check if a letter is in the phrase
 
+//check if a letter is in the phrase
 function checkLetter(clickedButton) {
   const letterMatch = document.querySelectorAll(".letter");
   for (let i = 0; i < letterMatch.length; i++) {
@@ -62,27 +63,27 @@ function checkLetter(clickedButton) {
 
 //check if the game has been won or lost
 function checkWin() {
-  const letter = document.querySelector(".letter");
-  const show = document.querySelector(".show");
+  const letter = document.querySelectorAll(".letter");
+  const show = document.querySelectorAll(".show");
   const head = document.querySelector(".title");
+  const overlay = document.getElementById("overlay");
   if (show.length === letter.length) {
     overlay.className = "win";
     overlay.style.display = "flex";
-    overlayWords.textContent = "You won! Good job.";
+    head.textContent = "You won! Good job.";
   } else if (missed === 5) {
     overlay.className = "lose";
     overlay.style.display = "flex";
-    overlayWords.textContent = "You lost, would you like to try again?";
+    head.textContent = "You lost, would you like to try again?";
   }
 }
-//listen for the start game button to be pressed
 
 // listen for the onscreen keyboard to be clicked
 qwerty.addEventListener("click", (e) => {
   if (e.target.tagName === "BUTTON") {
-    checkLetter(e.target.innerHTML);
+    const find = checkLetter(e.target.textContent);
     e.target.classList.add("chosen");
-
+    checkWin();
     if (find === null) {
       const liveCounter = document.getElementsByClassName("tries");
       for (let i = 0; i < liveCounter.length; i++) {
