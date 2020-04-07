@@ -57,8 +57,9 @@ function checkLetter(clickedButton) {
       letterMatch[i].classList.add("show");
     }
   }
+  return letterMatch;
 }
-return letterMatch;
+
 //check if the game has been won or lost
 function checkWin() {
   const letter = document.querySelector(".letter");
