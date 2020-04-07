@@ -63,11 +63,14 @@ return letterMatch;
 function checkWin() {
   const letter = document.querySelector(".letter");
   const show = document.querySelector(".show");
+  const head = document.querySelector(".title");
   if (show.length === letter.length) {
     overlay.className = "win";
+    overlay.style.display = "flex";
     overlayWords.textContent = "You won! Good job.";
   } else if (missed === 5) {
     overlay.className = "lose";
+    overlay.style.display = "flex";
     overlayWords.textContent = "You lost, would you like to try again?";
   }
 }
