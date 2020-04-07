@@ -52,13 +52,15 @@ addPhraseToDisplay(phraseArray);
 //check if a letter is in the phrase
 function checkLetter(clickedButton) {
   const letterMatch = document.querySelectorAll(".letter");
+  let match = null;
   for (let i = 0; i < letterMatch.length; i++) {
     if (letterMatch[i].innerHTML.toLowerCase() === clickedButton) {
       find = clickedButton;
       letterMatch[i].classList.add("show");
+      match = true;
     }
   }
-  return letterMatch;
+  return match;
 }
 
 //check if the game has been won or lost
@@ -83,15 +85,12 @@ qwerty.addEventListener("click", (e) => {
   if (e.target.tagName === "BUTTON") {
     const find = checkLetter(e.target.textContent);
     e.target.classList.add("chosen");
-    checkWin();
+
     if (find === null) {
       const liveCounter = document.getElementsByClassName("tries");
-      for (let i = 0; i < liveCounter.length; i++) {
-        if (liveCounter[i].children[0] > -1) {
-          liveCounter[i].children[0].src = "images/lostHeart.png";
-          missed += 1;
-        }
-      }
+      missed += 1;
+      liveCounter[missed - 1].children[0].src = "images/lostHeart.png";
     }
+    checkWin();
   }
 });
