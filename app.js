@@ -83,9 +83,12 @@ qwerty.addEventListener("click", (e) => {
     checkLetter(e.target.innerHTML);
     e.target.classList.add("chosen");
 
-    if (find === false) {
-      missed += 1;
-      lives[missed - 1].firstChild.src = "images/lostHeart.png";
+    if (find === null) {
+      const liveCounter = document.getElementsByClassName('tries');
+      for(let i = 0; i <liveCounter.length; i++) {
+        if (liveCounter[i])
+      }
+      
     }
   }
 });
